@@ -1,0 +1,88 @@
+<div class="col" style="padding: 0 0 0 0; margin-top: 0">
+  <ul class="nav first-navbar">
+    <li class="nav-item">
+      <h1>
+        <box-icon name='t-shirt' type='solid' color='#e60a62' style="width: 41px; height: 41px;"
+          class="me-2"></box-icon>
+        ModaVirtual
+      </h1>
+    </li>
+  </ul>
+</div>
+<div class="col" style="padding: 0 0 0 0; margin-top: 0">
+  <ul class="nav justify-content-end second-navbar">
+    <li class="nav-item">
+      <a class="nav-link" href="pedidos.html">
+        <box-icon name='package' color='#0c78e2' ></box-icon> Pedidos
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="iniciarsesion.html">
+        <box-icon name='log-in-circle' type='solid' color='#0c78e2' ></box-icon> Iniciar Sesión
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="carrito.html" id="carrito">
+        <box-icon name='cart-alt' type='solid' color='#0c78e2' ></box-icon> 
+        Carrito 
+        (<span id="contador">0</span>)
+      </a>
+    </li>
+  </ul>
+
+  <ul class="d-lg-none nav justify-content-end third-navbar">
+    <li class="nav-item">
+      <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
+        <box-icon name='menu' style="width: 37px; height: 37px"></box-icon>
+      </button>
+    </li>
+  </ul>
+</div>
+
+<!-- ====== OFFCANVAS ====== -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+  <div class="offcanvas-header">
+    <h2 class="offcanvas-title" id="offcanvasResponsiveLabel">
+      <box-icon name='menu'></box-icon>&nbsp;&nbsp;Menú
+    </h2>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" href="pedidos.html">
+          <box-icon name='package' color='#0c78e2' ></box-icon> Pedidos
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="iniciarsesion.html">
+          <box-icon name='log-in-circle' type='solid' color='#0c78e2' ></box-icon> Iniciar Sesión
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="carrito.html" id="carrito">
+          <box-icon name='cart-alt' type='solid' color='#0c78e2' ></box-icon> 
+          Carrito 
+          (<span id="contador">0</span>)
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- ====== OFFCANVAS ====== -->
+
+<script type="text/javascript">
+  const hideMenu_onMobiles = function(){
+    if( $(window).width() <= 768 ){
+      $('.nav.second-navbar').hide();
+    }else{
+      $('.nav.second-navbar').show();
+    }
+  };
+
+  $( hideMenu_onMobiles() );
+
+  $(window).on('resize', function(){
+    $( hideMenu_onMobiles() );
+  });
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="libraries/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="libraries/css/select2_4.1.0.min.css">
+
+    <title>ModaVirtual, Tienda en Linea de Ropa, Calzado y Otros Artículos de Moda | Iniciar Sesión</title>
+  </head>
+  <body>
+    <script src="libraries/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="libraries/js/jquery3.7.0.min.js"></script>
+    <script src="libraries/js/select2_4.1.0.min.js"></script>
+    <script src="libraries/js/lodash4.17.21.min.js"></script>
+
+    <div class="container pt-3 pb-3">
+      <div class="mt-5 mb-5">
+        <h1>ModaVirtual</h1>
+        <h4>
+          <box-icon type='solid' name='log-in-circle'></box-icon>
+          Iniciar Sesión
+        </h4>
+      </div>
+
+      <form action="peticiones/iniciarsesion.php" method="POST">
+        <div class="mb-3">
+          <label for="correo" class="col-sm-2 col-form-label">Correo Electrónico</label>
+          <input type="email" class="form-control" id="correo" name="correo_electronico" required>
+        </div>
+        <div class="mb-3">
+          <label for="contrasena" class="col-sm-2 col-form-label">Contraseña</label>
+          <input type="password" class="form-control" id="contrasena" name="contra" required>
+        </div>
+
+        <input type="submit" id="submit-form" class="d-none">
+      </form>
+
+      <div class="mt-4" style="text-align: right">
+        <a class="btn btn-primary" onclick="$('#submit-form').click()">Continuar</a>
+        <a class="btn btn-secondary" href="index.html">Volver</a>
+      </div>
+    </div>
+
+    <footer class="footer"></footer>
+
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

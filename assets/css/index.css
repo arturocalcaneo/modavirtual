@@ -1,0 +1,28 @@
+.footer {
+	display: inline-block;
+	position: absolute;
+	overflow: hidden;
+	bottom: 0;
+	left: 0;
+
+	width: 100%;
+	height: auto;
+}
+
+
+.nav.second-navbar a,
+.nav.first-navbar h1,
+.offcanvas .offcanvas-header .offcanvas-title,
+.offcanvas .offcanvas-body a {
+	display: flex;
+	align-items: center !important;
+	text-align: left !important;
+}
+
+.nav.third-navbar .nav-item > button {
+	background: transparent !important;
+	align-items: center !important;
+	display: flex !important;
+	text-align: center !important;
+	border: 0;
+}
