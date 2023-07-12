@@ -58,7 +58,7 @@ $(document).ready(function(){
 	$.ajaxSetup({
 		async: false,
 		cache: false
-	});
+	});	
 	// =======================================
 	switch( jsonHref.nombreArchivo ){
 		// ==== DASHBOARD ADMIN ====
@@ -77,6 +77,22 @@ $(document).ready(function(){
 		default:
 			$('.navbar-app').load('./htmlComponents/navbar.tienda.html');
 			$('.subnavbar').load('./htmlComponents/subnavbar.tienda.html');
+
+			new Swiper('.slider-tienda-principal', {
+			  	direction: 'horizontal',
+				loop: true,
+
+				// Navigation arrows
+				navigation: {
+					nextEl: '.slider-tienda-principal > .swiper-button-next',
+					prevEl: '.slider-tienda-principal > .swiper-button-prev',
+				},
+
+				pagination: {
+				    el: '.slider-tienda-principal > .swiper-pagination',
+				    clickable: true
+				  }
+			});
 		break;
 		// ==== INDEX ====
 	}
